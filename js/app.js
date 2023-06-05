@@ -29,4 +29,47 @@ for (let i = 0; i < count; i++) {
     })
 }
 
+//******************************************************* 
+//NEW SKILLS SECTION
+// *****************************************************
+const theLinks = document.querySelectorAll('.skills-nav a')
+const skillItems = document.querySelectorAll('.skill-new-item')
 
+theLinks.forEach(link =>{
+    link.addEventListener('click',(e)=>{
+        e.preventDefault();
+        if(e.target.dataset.category == "all"){
+            removeClassHiddenAll();
+            return;
+        }
+        removeClassActive();
+        e.target.classList.add("active");
+        addHiddenClass();
+        removeClassHidden(e);
+
+    })
+})
+function removeClassHiddenAll(){
+    skillItems.forEach( skillitem =>{
+            skillitem.classList.remove('skill-item-hidden');
+    })
+}
+function removeClassHidden(e){
+    skillItems.forEach( skillitem =>{
+        if(skillitem.dataset.category == e.target.dataset.category){
+            skillitem.classList.remove('skill-item-hidden');
+        }
+    })
+}
+
+function removeClassActive(){
+    theLinks.forEach(thisLink =>{
+        thisLink.classList.remove("active");
+    })
+}
+
+function addHiddenClass(){
+    skillItems.forEach(skillItem => {
+        skillItem.classList.add("skill-item-hidden");
+    })
+}

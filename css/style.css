@@ -378,3 +378,50 @@ FOOTER SECTION
     font-size: 12px;
     font-weight: 400;
 }
+/*----------------------------------------- 
+NEW SKILLS 
+-------------------------------------------*/
+.skills-nav{
+    display: block;
+}
+.skills-nav ul{
+    display: flex;
+    justify-content: center;
+}
+.skills-nav ul li{
+    display: inline-block;
+    margin:5px 5px;
+}
+.skills-nav ul li a{
+    padding:10px 30px;
+    color:black;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.skills-nav ul li a:hover{
+    background-color: var(--main-color);
+    color:white;
+    border-radius: 10px;
+}
+.skills-nav ul li a.active{
+    background-color: var(--main-color);
+    color:white;
+    border-radius: 10px;
+}
+.skill-item-hidden{
+    display: none !important;
+}
+.skill-new-item .card-body h5{
+    font-size: 22px;
+    margin:0 0 20px;
+    color: var(--black-900);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.skill-new-item .card-body p{
+    font-size: 16px;
+    line-height: 26px;
+    color:var(--black-400);
+    font-weight: 300;
+    margin: 0 0 15px;
+}
