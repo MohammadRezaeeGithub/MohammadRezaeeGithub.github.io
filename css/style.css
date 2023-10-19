@@ -123,6 +123,13 @@ a{
     border-color: white !important;
     background-color: white;
 }
+.card .project-badge{
+    background-color: var(--main-color);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 4px 10px;
+    color: white !important;
+}
 /**************---------------------------------------- 
 NAV STYLE
 *************------------------------------------------*/
